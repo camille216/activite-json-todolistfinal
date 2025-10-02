@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des tâches</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; }
+        h1, h2 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 2em; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background: #f4f4f4; }
+        .section { margin-bottom: 2em; }
+    </style>
+</head>
+<body>
+    <h1>Liste des tâches</h1>
+
+    <div class="section">
+        <h2>Priorités</h2>
+        <ul>
+            <li>Très important</li>
+            <li>Important</li>
+            <li>Moyen</li>
+            <li>Peu important</li>
+            <li>Non prioritaire</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Contextes</h2>
+        <ul>
+            <li>Travail</li>
+            <li>Maison</li>
+            <li>Courses</li>
+            <li>Loisirs</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Tâches</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Libellé</th>
+                    <th>Description</th>
+                    <th>Date de création</th>
+                    <th>Date de fin</th>
+                    <th>Priorité</th>
+                    <th>Contexte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Acheter du pain</td>
+                    <td>Aller à la boulangerie du quartier</td>
+                    <td>2025-09-22</td>
+                    <td>2025-09-23</td>
+                    <td>Important</td>
+                    <td>Courses</td>
+                </tr>
+                <tr>
+                    <td>Préparer présentation</td>
+                    <td>Finaliser les slides pour la réunion</td>
+                    <td>2025-09-20</td>
+                    <td>2025-09-25</td>
+                    <td>Très important</td>
+                    <td>Travail</td>
+                </tr>
+                <tr>
+                    <td>Aller courir</td>
+                    <td>Sortie jogging de 30 minutes</td>
+                    <td>2025-09-21</td>
+                    <td>2025-09-21</td>
+                    <td>Peu important</td>
+                    <td>Loisirs</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
