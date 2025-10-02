@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Étape 1E — Regroupement 1A • 1B • 1C État • 1C Contexte • 1D</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --gap: 1rem; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; line-height: 1.6; }
+    h1 { margin-bottom: .25rem; }
+    .sub { color: #555; margin-top: 0; }
+    section { margin-top: 2rem; }
+    pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: .75rem; overflow:auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--gap); }
+    .card { border: 1px solid #e5e7eb; border-radius: .75rem; padding: 1rem; background: #fafafa; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .hint { background:#f1f5f9; border:1px solid #e2e8f0; padding: .75rem 1rem; border-radius:.5rem; }
+  </style>
+
+  <script>
+    // Étape 1A — Exemple de tâche minimaliste
+    let exempleTache = {
+  "idTache": "1",
+  "libelle": "Acheter du pain",
+  "description": "Aller à la boulangerie du quartier",
+  "dateCreation": "2025-09-22",
+  "dateFin": "2025-09-23"
+};
+    console.log("1A exempleTache:", exempleTache);
+
+    // Étape 1B — Table des priorités
+    let listePriorites = [
+  {
+    "idPriorite": "1",
+    "priorite": "Très important"
+  },
+  {
+    "idPriorite": "2",
+    "priorite": "Important"
+  },
+  {
+    "idPriorite": "3",
+    "priorite": "Moyen"
+  },
+  {
+    "idPriorite": "4",
+    "priorite": "Peu important"
+  },
+  {
+    "idPriorite": "5",
+    "priorite": "Non prioritaire"
+  }
+];
+    console.log("1B listePriorites:", listePriorites);
+
+    // Étape 1C (État) — Table des états
+    let listeEtats = [
+  {
+    "idEtat": "1",
+    "etat": "À faire"
+  },
+  {
+    "idEtat": "2",
+    "etat": "En cours"
+  },
+  {
+    "idEtat": "3",
+    "etat": "En attente"
+  },
+  {
+    "idEtat": "4",
+    "etat": "Terminé"
+  }
+];
+    console.log("1C (État) listeEtats:", listeEtats);
+
+    // Étape 1C (Contexte) — Table des contextes
+    let listeContextes = [
+  {
+    "idContexte": "1",
+    "contexte": "Travail"
+  },
+  {
+    "idContexte": "2",
+    "contexte": "Maison"
+  },
+  {
+    "idContexte": "3",
+    "contexte": "Courses"
+  },
+  {
+    "idContexte": "4",
+    "contexte": "Loisirs"
+  }
+];
+    console.log("1C (Contexte) listeContextes:", listeContextes);
+
+    // Étape 1D — Liste des tâches complètes
+    let listeTaches = [
+  {
+    "idTache": "1",
+    "libelle": "Acheter du pain",
+    "description": "Aller à la boulangerie du quartier",
+    "dateCreation": "2025-09-22",
+    "dateFin": "2025-09-23",
+    "idPriorite": "2",
+    "idEtat": "1",
+    "idContexte": "3"
+  },
+  {
+    "idTache": "2",
+    "libelle": "Préparer présentation",
+    "description": "Finaliser les slides pour la réunion",
+    "dateCreation": "2025-09-20",
+    "dateFin": "2025-09-25",
+    "idPriorite": "1",
+    "idEtat": "2",
+    "idContexte": "1"
+  },
+  {
+    "idTache": "3",
+    "libelle": "Aller courir",
+    "description": "Sortie jogging de 30 minutes",
+    "dateCreation": "2025-09-21",
+    "dateFin": "2025-09-21",
+    "idPriorite": "4",
+    "idEtat": "4",
+    "idContexte": "4"
+  }
+];
+    console.log("1D listeTaches:", listeTaches);
+  </script>
+</head>
+<body>
+  <h1>Étape 1E — Page HTML</h1>
+  <p class="sub">Regroupe et affiche les variables issues de <strong>1A</strong>, <strong>1B</strong>, <strong>1C État</strong>, <strong>1C Contexte</strong> et <strong>1D</strong>. Ouvre la console (F12) pour vérifier les <code>console.log()</code>.</p>
+  
+  <div class="hint">
+    <strong>Astuce :</strong> Si tu vois 5 lignes distinctes dans la console (1A, 1B, 1C État, 1C Contexte, 1D), tout est OK.
+  </div>
+
+  <section class="grid">
+    <div class="card">
+      <h2>1A — Exemple de tâche</h2>
+      <pre id="pre-1A"></pre>
+    </div>
+    <div class="card">
+      <h2>1B — Priorités</h2>
+      <pre id="pre-1B"></pre>
+    </div>
+    <div class="card">
+      <h2>1C — États</h2>
+      <pre id="pre-1C-etat"></pre>
+    </div>
+    <div class="card">
+      <h2>1C — Contextes</h2>
+      <pre id="pre-1C-contexte"></pre>
+    </div>
+    <div class="card">
+      <h2>1D — Tâches</h2>
+      <pre id="pre-1D"></pre>
+    </div>
+  </section>
+
+  <script>
+    // Rendus visuels (facultatifs mais pratiques pour valider sans ouvrir la console)
+    document.getElementById("pre-1A").textContent = JSON.stringify(exempleTache, null, 2);
+    document.getElementById("pre-1B").textContent = JSON.stringify(listePriorites, null, 2);
+    document.getElementById("pre-1C-etat").textContent = JSON.stringify(listeEtats, null, 2);
+    document.getElementById("pre-1C-contexte").textContent = JSON.stringify(listeContextes, null, 2);
+    document.getElementById("pre-1D").textContent = JSON.stringify(listeTaches, null, 2);
+  </script>
+</body>
+</html>
